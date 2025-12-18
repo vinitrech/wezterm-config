@@ -6,8 +6,9 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices.
 
-config.font_size = 10
+config.font_size = 9
 config.color_scheme = "tokyonight_night"
+config.font = wezterm.font("Hack Nerd Font Mono")
 
 -- 2. Background Image Layering
 config.background = {
