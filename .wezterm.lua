@@ -27,5 +27,46 @@ config.background = {
 	},
 }
 
+----------------------------------------------------------------------
+-- Workspace keybindings (ADDED)
+----------------------------------------------------------------------
+
+local act = wezterm.action
+
+config.keys = {
+	-- Create OR switch to a workspace by name
+	{
+		key = "n",
+		mods = "CTRL|SHIFT",
+		action = act.PromptInputLine({
+			description = "Workspace name",
+			action = wezterm.action_callback(function(window, pane, line)
+				if not line or line == "" then
+					return
+				end
+
+				window:perform_action(
+					act.SwitchToWorkspace({
+						name = line,
+						spawn = {
+							cwd = wezterm.home_dir,
+						},
+					}),
+					pane
+				)
+			end),
+		}),
+	},
+
+	-- Fast navigation between workspaces (keyboard-only launcher)
+	{
+		key = "w",
+		mods = "CTRL|SHIFT",
+		action = act.ShowLauncherArgs({
+			flags = "WORKSPACES",
+		}),
+	},
+}
+
 -- Finally, return the configuration to wezterm:
 return config
