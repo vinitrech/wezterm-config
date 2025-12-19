@@ -37,7 +37,7 @@ config.keys = {
 	-- Create OR switch to a workspace by name
 	{
 		key = "n",
-		mods = "CTRL|SHIFT",
+		mods = "CTRL|ALT",
 		action = act.PromptInputLine({
 			description = "Workspace name",
 			action = wezterm.action_callback(function(window, pane, line)
@@ -61,7 +61,7 @@ config.keys = {
 	-- Fast navigation between workspaces (keyboard-only launcher)
 	{
 		key = "w",
-		mods = "CTRL|SHIFT",
+		mods = "CTRL|ALT",
 		action = act.ShowLauncherArgs({
 			flags = "WORKSPACES",
 		}),
