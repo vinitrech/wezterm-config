@@ -22,7 +22,7 @@ config.background = {
 		width = "100%",
 		height = "100%",
 		-- Dim the image so you can still read your code/text
-		hsb = { brightness = 0.05, saturation = 1.0 },
+		hsb = { brightness = 0.02, saturation = 1.0 },
 		opacity = 1, -- This is the opacity of the IMAGE itself
 	},
 }
