@@ -10,6 +10,31 @@ config.font_size = 9
 config.color_scheme = "tokyonight_night"
 config.font = wezterm.font("Hack Nerd Font Mono")
 
+-- 2. Background Image Layering
+config.background = {
+	{
+		source = {
+			-- Use an absolute path (e.g., "/Users/name/Pictures/bg.jpg" or "C:/Users/name/bg.png")
+			File = "C:\\Users\\vinit\\OneDrive\\Documentos\\vaporwave.jpeg",
+		},
+		-- "Cover" fills the screen, "Contain" shows the whole image
+		attachment = { Parallax = 0.1 }, -- Slight movement when scrolling
+		width = "100%",
+		height = "100%",
+		-- Dim the image so you can still read your code/text
+		hsb = { brightness = 0.2, saturation = 1.0 },
+		opacity = 1, -- This is the opacity of the IMAGE itself
+	},
+	{
+		source = {
+			Color = "#000000",
+		},
+		width = "100%",
+		height = "100%",
+		opacity = 0.8,
+	},
+}
+
 ----------------------------------------------------------------------
 -- Workspace keybindings (ADDED)
 ----------------------------------------------------------------------
