@@ -10,7 +10,7 @@ config.font_size = 9
 config.font = wezterm.font("Hack Nerd Font Mono")
 
 -- 🌙 Catppuccin Mocha + transparency
-config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "tokyonight_moon"
 config.window_background_opacity = 1.0
 config.text_background_opacity = 1.0
 
