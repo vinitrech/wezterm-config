@@ -5,16 +5,11 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices.
-
 config.font_size = 9
 config.font = wezterm.font("Hack Nerd Font Mono")
-
--- 🌙 Catppuccin Mocha + transparency
 config.color_scheme = "tokyonight_moon"
-config.window_background_opacity = 1.0
-config.text_background_opacity = 1.0
 
--- Optional but recommended visual polish
+-- Visual polish
 config.line_height = 1.1
 config.cell_width = 0.95
 config.window_padding = {
