@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices.
 config.font_size = 9
 config.font = wezterm.font("Hack Nerd Font Mono")
-config.color_scheme = "tokyonight_moon"
+config.color_scheme = "tokyonight_storm"
 config.window_background_opacity = 1
 config.text_background_opacity = 1
 
